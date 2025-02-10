@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.yangdaowan</groupId>
+    <artifactId>auth-matrix-build</artifactId>
+    <version>${revision}</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+
+  <artifactId>auth-matrix-dependencies</artifactId>
+  <packaging>pom</packaging>
+  <name>auth matrix dependencies</name>
+  <description>提供统一的依赖管理</description>
+
+  <properties>
+    <!--Maven-->
+    <module.install.skip>true</module.install.skip>
+    <module.deploy.skip>true</module.deploy.skip>
+    <maven.javadoc.skip>false</maven.javadoc.skip>
+    <module.jacoco.skip>true</module.jacoco.skip>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
+    <skipTests>true</skipTests>
+    <!--java 版本-->
+    <java.version>17</java.version>
+    <project.encoding>UTF-8</project.encoding>
+    <main.user.dir>${user.dir}</main.user.dir>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <!--版本号-->
+    <spring-security-rsa.version>1.0.11.RELEASE</spring-security-rsa.version>
+    <google.guava.version>31.1-jre</google.guava.version>
+    <easyexcel.version>3.2.0</easyexcel.version>
+    <redisson.version>3.19.3</redisson.version>
+    <arthas.version>3.6.7</arthas.version>
+    <hibernate-types.version>2.21.1</hibernate-types.version>
+    <commons-io.version>2.11.0</commons-io.version>
+    <springdoc.version>1.6.14</springdoc.version>
+    <fastjson.version>2.0.23</fastjson.version>
+    <opensaml.version>4.0.1</opensaml.version>
+    <browscap.version>1.4.0</browscap.version>
+    <java-otp.version>0.4.0</java-otp.version>
+    <failsafe.version>3.3.0</failsafe.version>
+    <bouncycastle.version>1.70</bouncycastle.version>
+    <org.mapstruct.version>1.5.3.Final</org.mapstruct.version>
+    <lombok-mapstruct-binding.version>0.2.0</lombok-mapstruct-binding.version>
+    <spring-cloud-context.version>3.1.5</spring-cloud-context.version>
+    <passay.version>1.6.2</passay.version>
+    <cron-utils.version>9.2.0</cron-utils.version>
+    <reflections.version>0.10.2</reflections.version>
+    <spring-security-oauth2-authorization-server.version>0.4.0</spring-security-oauth2-authorization-server.version>
+    <!-- 插件版本 -->
+    <apt-maven-plugin.version>1.1.3</apt-maven-plugin.version>
+  </properties>
+
+  <!--dependencies-->
+  <dependencies>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-loader</artifactId>
+    </dependency>
+    <!-- Log4j到SLF4J的日志桥接，使得可以使用SLF4J API来记录日志，同时保留Log4j配置的灵活性。  -->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>log4j-over-slf4j</artifactId>
+    </dependency>
+    <!-- 帮助在Java Web应用程序中管理前端库（如jQuery, Bootstrap等）的依赖关系 -->
+    <dependency>
+      <groupId>org.webjars</groupId>
+      <artifactId>webjars-locator-core</artifactId>
+    </dependency>
+    <!-- 用于在运行时扫描类路径中的元数据，支持注解、子类查找等功能。 -->
+    <dependency>
+      <groupId>org.reflections</groupId>
+      <artifactId>reflections</artifactId>
+      <version>${reflections.version}</version>
+    </dependency>
+    <!-- 用于处理Cron表达式的库，适用于任务调度。   -->
+    <dependency>
+      <groupId>com.cronutils</groupId>
+      <artifactId>cron-utils</artifactId>
+      <version>${cron-utils.version}</version>
+    </dependency>
+    <!--    提供重试机制，便于处理临时性故障。-->
+    <dependency>
+      <groupId>org.springframework.retry</groupId>
+      <artifactId>spring-retry</artifactId>
+    </dependency>
+
+    <!-- 密码验证器和生成器 -->
+    <dependency>
+      <groupId>org.passay</groupId>
+      <artifactId>passay</artifactId>
+      <version>${passay.version}</version>
+    </dependency>
+
+    <!-- spring-cloud-context -->
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-context</artifactId>
+      <version>${spring-cloud-context.version}</version>
+    </dependency>
+    <!-- 一个强大的HTTP客户端库，支持同步和异步请求 -->
+    <dependency>
+      <groupId>org.apache.httpcomponents</groupId>
+      <artifactId>httpclient</artifactId>
+    </dependency>
+    <!--lang3-->
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+    </dependency>
+    <!--   browscap  用于检测用户代理字符串并获取浏览器和操作系统信息。   -->
+    <dependency>
+      <groupId>com.blueconic</groupId>
+      <artifactId>browscap-java</artifactId>
+      <version>${browscap.version}</version>
+    </dependency>
+
+    <!--guava-->
+    <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>guava</artifactId>
+      <version>${google.guava.version}</version>
+    </dependency>
+    <!--common-io-->
+    <dependency>
+      <groupId>commons-io</groupId>
+      <artifactId>commons-io</artifactId>
+      <version>${commons-io.version}</version>
+    </dependency>
+    <!--easyexcel-->
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>easyexcel</artifactId>
+      <version>${easyexcel.version}</version>
+    </dependency>
+    <!-- fastjson -->
+    <dependency>
+      <groupId>com.alibaba.fastjson2</groupId>
+      <artifactId>fastjson2</artifactId>
+      <version>${fastjson.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.alibaba.fastjson2</groupId>
+      <artifactId>fastjson2-extension</artifactId>
+      <version>${fastjson.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springdoc</groupId>
+      <artifactId>springdoc-openapi-ui</artifactId>
+      <version>${springdoc.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springdoc</groupId>
+      <artifactId>springdoc-openapi-security</artifactId>
+      <version>${springdoc.version}</version>
+    </dependency>
+    <!--redisson-->
+    <dependency>
+      <groupId>org.redisson</groupId>
+      <artifactId>redisson-spring-boot-starter</artifactId>
+      <version>${redisson.version}</version>
+      <exclusions>
+        <exclusion>
+          <groupId>org.redisson</groupId>
+          <artifactId>redisson-spring-data-30</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.redisson</groupId>
+      <artifactId>redisson-spring-data-27</artifactId>
+      <version>${redisson.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-json</artifactId>
+    </dependency>
+    <!--spring session-->
+    <dependency>
+      <groupId>org.springframework.session</groupId>
+      <artifactId>spring-session-data-redis</artifactId>
+    </dependency>
+    <!--quartz-->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-quartz</artifactId>
+    </dependency>
+    <!--freemarker-->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-freemarker</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-data-redis</artifactId>
+    </dependency>
+    <!--liquibase 数据库版本控制工具，帮助管理数据库变更脚本。  -->
+    <dependency>
+      <groupId>org.liquibase</groupId>
+      <artifactId>liquibase-core</artifactId>
+    </dependency>
+    <!--mysql-->
+    <dependency>
+      <groupId>com.mysql</groupId>
+      <artifactId>mysql-connector-j</artifactId>
+    </dependency>
+    <!--spring data jpa-->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-data-jpa</artifactId>
+    </dependency>
+    <!--hibernate-types-55 -->
+    <dependency>
+      <groupId>com.vladmihalcea</groupId>
+      <artifactId>hibernate-types-55</artifactId>
+      <version>${hibernate-types.version}</version>
+    </dependency>
+    <!--  querydsl  -->
+    <dependency>
+      <groupId>com.querydsl</groupId>
+      <artifactId>querydsl-jpa</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.querydsl</groupId>
+      <artifactId>querydsl-apt</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <!--security-->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-security</artifactId>
+    </dependency>
+    <!-- spring-security-rsa -->
+    <dependency>
+      <groupId>org.springframework.security</groupId>
+      <artifactId>spring-security-rsa</artifactId>
+      <version>${spring-security-rsa.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-oauth2-client</artifactId>
+    </dependency>
+    <!--validator-->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-validation</artifactId>
+    </dependency>
+    <!--aop-->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-aop</artifactId>
+    </dependency>
+    <!--web-->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+      <exclusions>
+        <exclusion>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-starter-tomcat</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <!--  undertow 容器-->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-undertow</artifactId>
+    </dependency>
+    <!--actuator 健康监控 -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-actuator</artifactId>
+    </dependency>
+    <!-- processor -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-configuration-processor</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <!--mapstruct Java注解处理器 -->
+    <dependency>
+      <groupId>org.mapstruct</groupId>
+      <artifactId>mapstruct</artifactId>
+      <version>${org.mapstruct.version}</version>
+    </dependency>
+    <!-- 用于生成一次性密码 -->
+    <dependency>
+      <groupId>com.eatthepath</groupId>
+      <artifactId>java-otp</artifactId>
+      <version>${java-otp.version}</version>
+    </dependency>
+    <!--lombok-->
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <!--security test-->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <groupId>org.junit.vintage</groupId>
+          <artifactId>junit-vintage-engine</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.security</groupId>
+      <artifactId>spring-security-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <!-- 故障处理库 -->
+    <dependency>
+      <groupId>dev.failsafe</groupId>
+      <artifactId>failsafe</artifactId>
+      <version>${failsafe.version}</version>
+    </dependency>
+    <!--  bouncycastle 加密库 -->
+    <dependency>
+      <groupId>org.bouncycastle</groupId>
+      <artifactId>bcutil-jdk15on</artifactId>
+      <version>${bouncycastle.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.bouncycastle</groupId>
+      <artifactId>bcprov-jdk15on</artifactId>
+      <version>${bouncycastle.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.bouncycastle</groupId>
+      <artifactId>bcpkix-jdk15on</artifactId>
+      <version>${bouncycastle.version}</version>
+    </dependency>
+    <!-- saml-->
+    <dependency>
+      <groupId>org.opensaml</groupId>
+      <artifactId>opensaml-core</artifactId>
+      <version>${opensaml.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.opensaml</groupId>
+      <artifactId>opensaml-saml-api</artifactId>
+      <version>${opensaml.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.opensaml</groupId>
+      <artifactId>opensaml-saml-impl</artifactId>
+      <version>${opensaml.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.opensaml</groupId>
+      <artifactId>opensaml-messaging-api</artifactId>
+      <version>${opensaml.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.opensaml</groupId>
+      <artifactId>opensaml-messaging-impl</artifactId>
+      <version>${opensaml.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.opensaml</groupId>
+      <artifactId>opensaml-soap-api</artifactId>
+      <version>${opensaml.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.opensaml</groupId>
+      <artifactId>opensaml-soap-impl</artifactId>
+      <version>${opensaml.version}</version>
+    </dependency>
+  </dependencies>
+  <!--  dependencyManagement  -->
+  <dependencyManagement>
+    <dependencies>
+      <!-- arthas-spring-boot-starter 监控调优 -->
+      <dependency>
+        <groupId>com.taobao.arthas</groupId>
+        <artifactId>arthas-spring-boot-starter</artifactId>
+        <version>${arthas.version}</version>
+      </dependency>
+      <!-- spring-security-oauth2-authorization-server 授权服务 -->
+      <dependency>
+        <groupId>org.springframework.security</groupId>
+        <artifactId>spring-security-oauth2-authorization-server</artifactId>
+        <version>${spring-security-oauth2-authorization-server.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+</project>
