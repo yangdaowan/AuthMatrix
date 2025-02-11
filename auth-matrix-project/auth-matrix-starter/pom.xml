@@ -15,4 +15,7 @@
     <name>auth matrix starter</name>
     <description>快速启动模块</description>
 
+    <dependencies>
+    </dependencies>
+
 </project>

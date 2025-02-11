@@ -15,11 +15,30 @@
   <name>auth matrix parent</name>
   <description>提供统一的构建管理</description>
 
+  <profiles>
+    <profile>
+      <id>dev</id>
+      <properties>
+        <spring.profiles.active>dev</spring.profiles.active>
+        <log.active>info</log.active>
+      </properties>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+    </profile>
+  </profiles>
+
   <!--build-->
   <build>
 
-    <plugins>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <filtering>true</filtering>
+      </resource>
+    </resources>
 
+    <plugins>
       <!--querydsl apt-->
       <plugin>
         <groupId>com.mysema.maven</groupId>

@@ -1,0 +1,53 @@
+server:
+  port: 1111
+  servlet:
+    context-path: /auth-matrix
+
+spring:
+  #应用
+  application:
+    name: @artifactId@
+  #配置
+  profiles:
+    active:
+      - @spring.profiles.active@
+  #服务
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
+  #缓存
+  cache:
+    type: redis
+    redis:
+      key-prefix: 'auth:matrix'
+  #会话
+  session:
+    redis:
+      namespace: ${spring.cache.redis.key-prefix}:session
+      flush-mode: immediate
+    store-type: redis
+  #json序列化
+  jackson:
+    #日期格式化
+    date-format: "yyyy-MM-dd HH:mm:ss"
+    #设置空如何序列化
+    default-property-inclusion: NON_NULL
+    deserialization:
+      #允许对象忽略json中不存在的属性
+      fail_on_unknown_properties: false
+    parser:
+      #允许出现单引号
+      allow_single_quotes: true
+      #允许出现特殊字符和转义符
+      allow_unquoted_control_chars: true
+    serialization:
+      #忽略无法转换的对象
+      fail_on_empty_beans: false
+      #格式化输出
+      indent_output: true
+
+#日志
+logging:
+  level:
+    root: @log.active@

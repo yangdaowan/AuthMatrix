@@ -1,0 +1,31 @@
+spring:
+  # 数据库
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/auth-matrix?useSSL=false&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+    hikari:
+      auto-commit: true
+      connection-test-query: SELECT 1
+      connection-timeout: 30000
+      idle-timeout: 30000
+      max-lifetime: 1800000
+      maximum-pool-size: 15
+      minimum-idle: 5
+      pool-name: auth-matrix
+  # 缓存
+  redis:
+    host: localhost
+    port: 6379
+    password: ''
+    database: 1
+    lettuce:
+      pool:
+        max-idle: 8
+        min-idle: 2
+        max-active: 8
+        max-wait: -1ms
+      shutdown-timeout: 200ms
+    timeout: 5000ms
