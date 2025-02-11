@@ -5,6 +5,30 @@
     <file url="file://$PROJECT_DIR$/auth-matrix-dependencies/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/auth-matrix-parent/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/auth-matrix-parent/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auth-matrix-project/auth-matrix-core/auth-matrix-base/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auth-matrix-project/auth-matrix-core/auth-matrix-base/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auth-matrix-project/auth-matrix-core/auth-matrix-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auth-matrix-project/auth-matrix-core/auth-matrix-common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auth-matrix-project/auth-matrix-core/auth-matrix-data/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auth-matrix-project/auth-matrix-core/auth-matrix-data/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auth-matrix-project/auth-matrix-core/auth-matrix-encryption/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auth-matrix-project/auth-matrix-core/auth-matrix-encryption/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auth-matrix-project/auth-matrix-core/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auth-matrix-project/auth-matrix-core/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auth-matrix-project/auth-matrix-extend/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auth-matrix-project/auth-matrix-extend/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auth-matrix-project/auth-matrix-service/auth-matrix-audit/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auth-matrix-project/auth-matrix-service/auth-matrix-audit/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auth-matrix-project/auth-matrix-service/auth-matrix-authn/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auth-matrix-project/auth-matrix-service/auth-matrix-authn/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auth-matrix-project/auth-matrix-service/auth-matrix-authz/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auth-matrix-project/auth-matrix-service/auth-matrix-authz/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auth-matrix-project/auth-matrix-service/auth-matrix-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auth-matrix-project/auth-matrix-service/auth-matrix-gateway/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auth-matrix-project/auth-matrix-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auth-matrix-project/auth-matrix-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auth-matrix-project/auth-matrix-starter/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auth-matrix-project/auth-matrix-starter/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/auth-matrix-project/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/auth-matrix-project/src/main/resources" charset="UTF-8" />
   </component>

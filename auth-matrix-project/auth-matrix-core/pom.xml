@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.yangdaowan</groupId>
+        <artifactId>auth-matrix-project</artifactId>
+        <version>${revision}</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <artifactId>auth-matrix-core</artifactId>
+    <packaging>pom</packaging>
+    <name>auth matrix core</name>
+    <description>核心基础模块</description>
+
+    <modules>
+        <module>auth-matrix-common</module>
+        <module>auth-matrix-base</module>
+        <module>auth-matrix-encryption</module>
+        <module>auth-matrix-data</module>
+    </modules>
+
+</project>

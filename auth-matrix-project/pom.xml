@@ -15,5 +15,12 @@
     <name>auth matrix project</name>
     <description>提供统一的项目管理</description>
 
+    <modules>
+        <module>auth-matrix-core</module>
+        <module>auth-matrix-service</module>
+        <module>auth-matrix-extend</module>
+        <module>auth-matrix-starter</module>
+    </modules>
+
 
 </project>

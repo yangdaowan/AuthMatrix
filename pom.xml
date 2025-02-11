@@ -7,8 +7,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-dependencies</artifactId>
-		<version>2.7.8</version>
-		<relativePath/>
+		<version>2.7.18</version>
 	</parent>
 
 	<groupId>com.yangdaowan</groupId>
@@ -18,11 +17,12 @@
 
 	<name>auth matrix build</name>
 	<description>提供统一的版本管理</description>
+
 	<properties>
 		<revision>0.0.1-SNAPSHOT</revision>
 <!--		<revision>0.0.1.RELEASE</revision>-->
 		<main.basedir>${basedir}</main.basedir>
-		<spring-boot.version>2.7.8</spring-boot.version>
+		<spring-boot.version>2.7.18</spring-boot.version>
 	</properties>
 
 </project>
